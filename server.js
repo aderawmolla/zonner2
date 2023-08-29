@@ -9,11 +9,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json({ limit: '200mb' }));
 app.use(cors());
 
-app.get('/zoner', (req, res) => {
+app.get('/', (req, res) => {
   res.send("executed correctly");
 });
 
 const port = process.env.EXPRESS_PORT || 3000;
-app.listen(port, () => {
+app.listen(port, (req,res) => {
   console.log('on the moddddon');
 });
